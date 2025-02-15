@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+
 }
 
 .navbar {
@@ -83,6 +84,38 @@
 
 .popup-button:hover {
   background-color: navy;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: darkblue;
+  padding: 10px 20px;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+.nav-button {
+  background-color: white;
+  color: darkblue;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.page-container {
+    padding: 40px 20px; 
+    text-align: center;
 }
 
 
