@@ -1,0 +1,26 @@
+.contact-container {
+  text-align: left;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.current-page {
+  color: black;
+  font-weight: bold;
+}
+
+.contact-title {
+  font-size: 44px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+p {
+  font-size: 26px;
+  line-height: 1.6;
+}
+
+strong {
+  color: #222;
+}
