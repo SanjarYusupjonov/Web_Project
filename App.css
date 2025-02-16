@@ -11,19 +11,18 @@
   justify-content: space-between;
   background-color: darkblue;
   color: white;
-  padding: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  padding: 10px 20px;
+
 }
 
 .logo {
   height: 40px;
 }
 
-.nav-buttons {
-  display: flex;
-}
-
 .nav-button {
+  display: flex;
   margin-right: 10px;
   padding: 10px 20px;
   background-color: white;
@@ -31,6 +30,7 @@
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  
 }
 
 .popup {
@@ -41,7 +41,8 @@
   background-color: white;
   padding: 20px;
   border: 2px solid darkblue;
-  width: 320px;
+  width: 420px;
+  height: 200px;
   text-align: center;
   border-radius: 10px; 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -60,6 +61,7 @@
 .popup input {
   width: 100%;
   padding: 5px;
+  margin: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
@@ -69,33 +71,19 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-top: 5px;
+
 }
 
-.popup-button {
-  width: 48%; 
-  background-color: darkblue;
+.popup-buttons {
   color: white;
-  border: none;
-  margin: 5px;
   cursor: pointer;
   border-radius: 5px;
-}
-
-.popup-button:hover {
-  background-color: navy;
-}
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  background-color: darkblue;
-  padding: 10px 20px;
-  color: white;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
+  margin-right: 20px;
 }
 
 .nav-link {
@@ -105,19 +93,10 @@
   font-size: 16px;
 }
 
-.nav-button {
-  background-color: white;
-  color: darkblue;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-}
-
 .page-container {
     padding: 40px 20px; 
     text-align: center;
 }
-
 
 
 
