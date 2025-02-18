@@ -54,7 +54,7 @@ const Menu = () => {
       }
       // more items yet to come 
     ],
-    sides: [
+    desserts: [
       {
         name: "Cake",
         description: "Best cake experience",
@@ -73,7 +73,7 @@ const Menu = () => {
       </div>
       <div className="menu-content">
         <MenuCategory title="Main Course" items={menuData.mainCourse} />
-        <MenuCategory title="Sides" items={menuData.sides} />
+        <MenuCategory title="Desserts" items={menuData.desserts} />
       </div>
     </div>
   );
