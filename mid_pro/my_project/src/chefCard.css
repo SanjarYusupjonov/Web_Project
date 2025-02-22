@@ -1,0 +1,25 @@
+src/ChefsCard.css
+
+/* Hover effect for the entire team member card */
+.team-member {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Style for social icons container */
+  .social a {
+    color: #444; /* Default color */
+    margin: 0 10px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Hover effect for social icons */
+  .social a:hover {
+    color: #007bff; /* Bootstrap primary color, or choose your own */
+    transform: scale(1.2);
+  }
