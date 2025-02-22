@@ -1,27 +1,34 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Navbar";
-import Home from "./Home";
 import Payment from "./Payment";
 import Contact from "./Contact";
+
+function HomePage() {
+  return (
+    <div className="page-container">
+      <h1>Welcome to the Home Page</h1>
+      <p>This is the home page content.</p>
+    </div>
+  );
+}
 
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="Home">
         <Navbar />
-        <div className="page-container">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/payment" element={<Payment />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </div>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/payment" element={<Payment />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </div>
     </Router>
   );
 }
 
 export default App;
+
 
 
