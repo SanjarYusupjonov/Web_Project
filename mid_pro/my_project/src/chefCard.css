@@ -23,3 +23,29 @@ src/ChefsCard.css
     color: #007bff; /* Bootstrap primary color, or choose your own */
     transform: scale(1.2);
   }
+  .member-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0; /* Rounded top corners */
+  }
+  
+  .wave-container {
+    position: absolute;
+    bottom: -1px; /* Adjust this for smooth blending */
+    left: 0;
+    width: 100%;
+    height: 80px; /* Adjust height to match your image */
+    overflow: hidden;
+    
+  }
+  
+  .wave {
+    width: 100%;
+    height: 100%;
+    transform: rotate(180deg);
+  }
+  
+  .wave-fill {
+    fill: white; /* Must match the background of the card */
+  }
+  

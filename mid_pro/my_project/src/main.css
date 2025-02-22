@@ -256,3 +256,12 @@
   .redcolor{
     color:red;
   }
+  
+  .font-amatic {
+    font-family: 'Amatic SC', cursive;
+    font-size: 50px;
+  }
+  .cheff{
+    font-size:13px;
+    font-family: sans-serif;
+  }

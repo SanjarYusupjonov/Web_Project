@@ -5,6 +5,7 @@ import DevelopersCard from "./AboutDevs";
 const App = () => {
     return (
         <div className="container mt-5 d-flex justify-content-center">
+           <ChefsCard/>
            <DevelopersCard/>
         </div>
     );
