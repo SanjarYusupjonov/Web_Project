@@ -10,14 +10,12 @@ function Navbar() {
   const [error, setError] = useState("");
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent page reload
-
     if (!email || !password) {
       setError("Please fill in all fields!");
-      return; // Keep popup open if fields are empty
+      return; 
     }
 
-    setShowPopup(false); // Close popup only if fields are filled
+    setShowPopup(false); 
     alert("Login/Signup successful!");
   };
 
