@@ -3,15 +3,11 @@
   margin: 40px auto;
   padding: 20px;
   font-family: Arial, sans-serif;
-}
 
-.current-page {
-  color: black;
-  font-weight: bold;
 }
 
 .contact-title {
-  font-size: 44px;
+  font-size: 34px;
   font-weight: bold;
   margin-top: 10px;
 }
@@ -21,6 +17,16 @@ p {
   line-height: 1.6;
 }
 
-strong {
-  color: #222;
+.image-container img {
+  width: 12cm;  
+  height: 12cx;
+  padding: 1cm;
+  padding-right: 2cm;
+
+}
+
+.event-card {
+  display: flex; 
+  margin-top: 1cm;
+  padding: 20px;
 }
