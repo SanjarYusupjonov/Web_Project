@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-
 }
 
 .navbar {
@@ -11,23 +10,19 @@
   justify-content: space-between;
   background-color: darkblue;
   color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   padding: 10px 20px;
 
 }
-
 .logo {
   height: 40px;
 }
-
 .nav-button {
   display: flex;
   margin-right: 10px;
   padding: 10px 20px;
   background-color: white;
   color: darkblue;
-  border: none;
   border-radius: 10px;
   cursor: pointer;
   
@@ -45,7 +40,6 @@
   height: 200px;
   text-align: center;
   border-radius: 10px; 
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .popup h2 {
@@ -66,14 +60,12 @@
   border-radius: 5px;
   box-sizing: border-box;
 }
-
 .button-group {
   display: flex;
   justify-content: space-between;
   width: 100%;
 
 }
-
 .popup-buttons {
   color: white;
   cursor: pointer;
