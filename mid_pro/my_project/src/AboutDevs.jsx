@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import pic1 from './assets/pic1.avif';
 import pic2 from './assets/123.png';
-import './ChefCard.css';
 import './main.css';
 
 const DevelopersCard = () => {

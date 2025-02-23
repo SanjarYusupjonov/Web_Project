@@ -1,14 +1,13 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap-icons/font/bootstrap-icons.css';
 import pic1 from './assets/pic1.avif'
 import pic2 from './assets/pic2.jpg'
 import pic3 from './assets/pic3.jpg'
-import './ChefCard.css'
 import './main.css'
 const ChefsCard = () => {
   // Array of chef objects - easy to add more chefs here
-  const chefs = [
+  const chefs   = [
     {
       name: 'Walter White',
       title: 'Master Chef',
