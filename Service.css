@@ -1,0 +1,242 @@
+/* Base styles */
+.service-page {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: white;
+    min-height: 100vh;
+  }
+  
+  /* Header styles */
+  .service-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .coffee-icon {
+    font-size: 32px;
+    background-color: #e6f0e6; /* light green */
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  
+  .service-header h1 {
+    color: #0c4a6e; /* blue */
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+  
+  .service-subtitle {
+    color: #6b7280; /* gray */
+    max-width: 500px;
+  }
+  
+  /* Section styles */
+  .services-section,
+  .info-section,
+  .faq-section,
+  .sustainability-section {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+  }
+  
+  h2 {
+    color: #166534; /* green */
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  
+  /* Services grid */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+  }
+  
+  .service-card {
+    border: 1px solid #d1e9d1; /* light green border */
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-icon {
+    font-size: 28px;
+    background-color: #f0faf0; /* very light green */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  
+  .service-card h3 {
+    color: #0c4a6e; /* blue */
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .service-card p {
+    color: #6b7280; /* gray */
+    margin: 0;
+  }
+  
+  /* Info section */
+  .info-section {
+    background-color: #f0f7ff; /* very light blue */
+    border: 1px solid #d1e9d1; /* light green border */
+    border-radius: 8px;
+    padding: 24px;
+  }
+  
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  
+  .info-item {
+    display: flex;
+    margin-bottom: 24px;
+  }
+  
+  .info-icon {
+    font-size: 20px;
+    background-color: #e6f0e6; /* light green */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+    flex-shrink: 0;
+  }
+  
+  .info-content {
+    flex: 1;
+  }
+  
+  .info-content h3 {
+    color: #0c4a6e; /* blue */
+    font-size: 18px;
+    margin: 0 0 8px 0;
+  }
+  
+  .info-content p,
+  .info-content ul {
+    color: #6b7280; /* gray */
+    margin: 0;
+  }
+  
+  .hours-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .hours-list li {
+    margin-bottom: 4px;
+  }
+  
+  .bold {
+    font-weight: bold;
+  }
+  
+  .email {
+    color: #0c4a6e; /* blue */
+  }
+  
+  /* FAQ section */
+  .faq-item {
+    margin-bottom: 16px;
+    border: 1px solid #d1e9d1; /* light green border */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+  
+  .faq-question {
+    background-color: #f0faf0; /* very light green */
+    padding: 16px;
+  }
+  
+  .faq-question h3 {
+    color: #0c4a6e; /* blue */
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .faq-answer {
+    padding: 16px;
+    border-top: 1px solid #d1e9d1; /* light green border */
+  }
+  
+  .faq-answer p {
+    color: #6b7280; /* gray */
+    margin: 0;
+  }
+  
+  /* Sustainability section */
+  .sustainability-section {
+    background-color: #f0faf0; /* very light green */
+    border: 1px solid #d1e9d1; /* light green border */
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+  }
+  
+  .sustainability-section h3 {
+    color: #166534; /* green */
+    font-size: 20px;
+    margin: 0 0 16px 0;
+  }
+  
+  .sustainability-section p {
+    color: #6b7280; /* gray */
+    margin: 0;
+  }
+  
+  /* Footer */
+  .service-footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #6b7280; /* gray */
+    font-size: 14px;
+  }
+  
+  .service-footer p {
+    margin: 4px 0;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .info-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
