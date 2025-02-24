@@ -20,7 +20,7 @@
 
 .dish-img img {
     width: 100%;
-    height: 200px;
+    height: 300px;
     object-fit: cover;
 }
 
@@ -38,6 +38,16 @@
     font-size: 1.5rem;
     color: #333;
 }
+/* Add to dish.css */
+.total-price-container {
+    padding: 20px;
+  }
+  
+  .total-price {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+  }
 
 .dish-info p {
     color: #666;

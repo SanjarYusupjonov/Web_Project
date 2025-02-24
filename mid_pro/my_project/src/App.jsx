@@ -9,10 +9,10 @@ const App = () => {
     return (
         <div className="container mt-5 d-flex justify-content-center">
            
-            <ChefsCard/>
+            {/* <ChefsCard/> */}
             {/* <AboutPage /> */}
            {/* <DevelopersCard/>  */}
-           {/* <DishesCard/> */}
+           <DishesCard/>
         </div>
     );
 };

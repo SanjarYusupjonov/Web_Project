@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import pic1 from './assets/pic1.avif';
-import pic2 from './assets/pic2.jpg';
-import pic3 from './assets/pic3.jpg';
+import pic1 from './assets/food1.png';
+import pic2 from './assets/food2.png';
+import pic3 from './assets/food3.png';
+import TotalPriceButton from './TotalPriceButton'; // Import the new component
 import './dish.css';
 
 const DishesCard = () => {
@@ -29,16 +30,21 @@ const DishesCard = () => {
       description: 'Fresh salmon with lemon herb sauce',
     },
     {
-        name: 'Grilled Salmon',
-        price: 18.99,
-        rating: 4.7,
-        image: pic3,
-        description: 'Fresh salmon with lemon herb sauce',
-      },      
+      name: 'Grilled Salmon',
+      price: 18.99,
+      rating: 4.7,
+      image: pic3,
+      description: 'Fresh salmon with lemon herb sauce',
+    },      
   ];
 
   // State to track quantity of each dish
   const [quantities, setQuantities] = useState(dishes.map(() => 0));
+
+  // Calculate total price
+  const totalPrice = dishes.reduce((sum, dish, index) => {
+    return sum + dish.price * quantities[index];
+  }, 0);
 
   // Handle quantity increase
   const handleIncrease = (index) => {
@@ -110,6 +116,11 @@ const DishesCard = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Total Price Button */}
+        <div className="text-center">
+          <TotalPriceButton totalPrice={totalPrice} />
         </div>
       </div>
     </section>
