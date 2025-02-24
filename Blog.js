@@ -41,21 +41,69 @@ const blogPosts = [
     title: "📢 Your Feedback Matters!",
     content:
       "Tell us what new meals you’d like to see on the menu. Vote in our monthly canteen survey!",
-    image: "https://i.pinimg.com/736x/3a/91/95/3a9195ed78e260c9cde86c9bfc3e7717.jpg",
+    image: "https://i.pinimg.com/736x/7d/92/d8/7d92d835c72726e01829caeb6bd53cb4.jpg",
   },
 ];
 
 function Blog() {
   const [selectedPost, setSelectedPost] = useState(null);
+  const [feedback, setFeedback] = useState("");
+  const [feedbackType, setFeedbackType] = useState("New Meal Request");
+  const [feedbackSubmitted, setFeedbackSubmitted] = useState(false);
+  const [reactions, setReactions] = useState({ 
+    "👍": 0, 
+    "😍": 0, 
+    "🤔": 0, 
+    "👎": 0 
+  });
+
+  const handleFeedbackSubmit = () => {
+    if (feedback.trim()) {
+      setFeedbackSubmitted(true);
+    }
+  };
+
+  const handleReaction = (emoji) => {
+    setReactions((prev) => ({ ...prev, [emoji]: prev[emoji] + 1 }));
+  };
 
   return (
     <div className="blog-container">
       {selectedPost ? (
         <div className="blog-detail">
-          <button onClick={() => setSelectedPost(null)}>← Back</button>
+          <button onClick={() => { setSelectedPost(null); setFeedbackSubmitted(false); setFeedback(""); }}>← Back</button>
           <h2>{selectedPost.title}</h2>
           <img src={selectedPost.image} alt={selectedPost.title} />
           <p>{selectedPost.content}</p>
+
+          {selectedPost.id === 6 && (
+            <div className="feedback-section">
+              {!feedbackSubmitted ? (
+                <>
+                  <textarea
+                    placeholder="Leave your feedback here..."
+                    value={feedback}
+                    onChange={(e) => setFeedback(e.target.value)}
+                  />
+                  <select value={feedbackType} onChange={(e) => setFeedbackType(e.target.value)}>
+                    <option>New Meal Request</option>
+                    <option>General Feedback</option>
+                  </select>
+                  <button onClick={handleFeedbackSubmit}>Submit</button>
+                </>
+              ) : (
+                <p>Thank you for your feedback! 🎉</p>
+              )}
+            </div>
+          )}
+
+          <div className="reaction-section">
+            {Object.keys(reactions).map((emoji) => (
+              <button key={emoji} onClick={() => handleReaction(emoji)}>
+                {emoji} {reactions[emoji]}
+              </button>
+            ))}
+          </div>
         </div>
       ) : (
         <div className="blog-list">
@@ -73,5 +121,6 @@ function Blog() {
 }
 
 export default Blog;
+
 
 
