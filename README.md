@@ -1,21 +1,43 @@
-# React JS University Canteen Website
+# React JS University Canteen Website  
 
-### This project was created using HTML, CSS, TailwindCSS, Bootstrap and React.
+### Built with HTML, CSS, TailwindCSS, Bootstrap, and React  
 
-The Live demo is available [Here](https://ubiquitous-kelpie-09bb0e.netlify.app/)
+🚀 **Live Demo:** [Click Here](https://ubiquitous-kelpie-09bb0e.netlify.app/)  
 
-## Description
+## 📌 Description  
 
-This is a React-based web application featuring a responsive design and interactive UI. Built using HTML, CSS, Bootstrap, and React, it ensures a seamless user experience. The project includes dynamic navigation, smooth animations, and optimized performance. Deployed on Netlify for accessibility and ease of use. Contributions and improvements are welcome!
+This is a **React-based University Canteen Website** that provides an interactive and user-friendly experience. Designed with **Bootstrap, TailwindCSS, and React**, it ensures responsiveness across all devices.  
 
-## How to use it
+### ✨ Features:
+- 📱 **Fully Responsive** – Works seamlessly on mobile, tablet, and desktop.  
+- 🎨 **Modern UI** – Beautifully styled with TailwindCSS & Bootstrap.  
+- 🔄 **Dynamic Navigation** – Easy-to-use menu and smooth transitions.  
+- 🚀 **Optimized Performance** – Fast loading and efficient rendering.  
+- 🌐 **Deployed on Netlify** – Accessible from anywhere.  
+- 🛠️ **Open Source** – Contributions are welcome!  
 
-To use this template:
-1. Clone the repository to your local machine,
-   ```bash
-   git clone https://github.com/SanjarYusupjonov/Web_Project.git
-3. run `npm install` to install all the required dependencies and
-4. run `npm start` to view the website locally.
-Feel free to edit and make changes. 
+---
+
+## 🛠️ How to Use  
+
+Follow these steps to run the project locally:  
+
+### 1️⃣ Clone the Repository  
+```bash
+git clone https://github.com/SanjarYusupjonov/Web_Project.git
+cd Web_Project
+
+### 2️⃣ Check whether Node installed or not 
+```bash
+cd project
+node -v  
+if not, you can download it. [Click Here](https://nodejs.org/en/download)
+
+### 3️⃣ Install Dependencies
+```bash
+npm install
+npm bootstrap
+
+
 
 You can also Fork the repo and clone to your local machine, make desired changes and enjoy.
