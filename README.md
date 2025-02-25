@@ -53,18 +53,17 @@ git clone https://github.com/SanjarYusupjonov/Web_Project.git
 ```
 Create a New Branch – Create a branch for your changes:
 
-bash
-Copy
+```bash
 git checkout -b your-branch-name
+```
 Make Changes – Implement your changes or fixes.
-
 Commit and Push – Commit your changes and push them to your fork:
 
-bash
-Copy
+```bash
 git add .
 git commit -m "Your commit message"
 git push origin your-branch-name
+```
 Create a Pull Request – Go to the original repository and create a pull request from your branch.
 
 📄 License
