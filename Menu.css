@@ -1,179 +1,313 @@
 /* Base styles */
 .menu-page {
-    font-family: Arial, sans-serif;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    background-color: white;
-    min-height: 100vh;
-  }
-  
-  /* Header styles */
-  .menu-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
-    text-align: center;
-  }
-  
-  .utensils-icon {
-    font-size: 32px;
-    background-color: #e6f0e6; /* light green */
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 16px;
-  }
-  
-  .menu-header h1 {
-    color: #0c4a6e; /* blue */
-    font-size: 28px;
-    margin-bottom: 8px;
-  }
-  
-  .menu-subtitle {
-    color: #6b7280; /* gray */
-    max-width: 500px;
-  }
-  
-  /* Menu content */
-  .menu-content {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  /* Category styles */
-  .menu-category {
-    margin-bottom: 24px;
-    border: 1px solid #d1e9d1; /* light green border */
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  }
-  
-  .category-header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px;
-    background-color: #f0faf0; /* very light green */
-    border: none;
-    cursor: pointer;
-    text-align: left;
-    transition: background-color 0.3s;
-  }
-  
-  .category-header:hover {
-    background-color: #e6f0e6; /* light green */
-  }
-  
-  .category-header h2 {
-    color: #166534; /* green */
-    font-size: 20px;
-    margin: 0;
-  }
-  
-  .chevron-icon {
-    color: #166534; /* green */
-    transition: transform 0.3s;
-  }
-  
-  .chevron-icon.rotate {
-    transform: rotate(180deg);
-  }
-  
-  /* Category items */
-  .category-items {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
-  }
-  
-  .category-items.expanded {
-    max-height: 2000px; /* Arbitrary large height */
-  }
-  
-  .menu-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 16px;
-    border-bottom: 1px solid #d1e9d1; /* light green border */
-  }
-  
-  .menu-item:last-child {
-    border-bottom: none;
-  }
-  
-  .menu-item:hover {
-    background-color: #f0f7ff; /* very light blue */
-  }
-  
-  .item-info {
-    flex: 1;
-  }
-  
-  .item-info h3 {
-    color: #0c4a6e; /* blue */
-    font-size: 18px;
-    margin: 0 0 4px 0;
-  }
-  
-  .description {
-    color: #6b7280; /* gray */
-    margin: 0;
-  }
-  
-  .item-price {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-left: 16px;
-  }
-  
-  .item-price span:first-child {
-    color: #166534; /* green */
-    font-weight: bold;
-    font-size: 18px;
-  }
-  
-  .vegetarian-badge {
-    display: flex;
-    align-items: center;
-    color: #166534; /* green */
-    margin-top: 4px;
-    font-size: 14px;
-  }
-  
-  .leaf-icon {
-    margin-right: 4px;
-  }
-  
-  /* Footer */
-  .menu-footer {
-    text-align: center;
-    margin-top: 40px;
-    color: #6b7280; /* gray */
-    font-size: 14px;
-  }
-  
-  .menu-footer p {
-    margin: 4px 0;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .menu-item {
-      flex-direction: column;
-    }
-    
-    .item-price {
-      margin-left: 0;
-      margin-top: 8px;
-      align-items: flex-start;
-    }
-  }
+  font-family: 'Segoe UI', Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: white;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Header styles */
+.menu-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+  text-align: center;
+  position: relative;
+}
+
+.utensils-icon {
+  font-size: 32px;
+  background: linear-gradient(135deg, #e6f0e6, #d1e9d1);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(22, 101, 52, 0.1);
+  transition: all 0.3s ease;
+}
+.utensils-icon:hover { transform: rotate(15deg); }
+
+.menu-header h1 {
+  color: #0c4a6e;
+  font-size: 32px;
+  margin-bottom: 12px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+  font-weight: 600;
+}
+
+.menu-subtitle {
+  color: #6b7280;
+  max-width: 500px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Menu content */
+.menu-content, .menu-promotions {
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+/* Category styles */
+.menu-category {
+  margin-bottom: 30px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.menu-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.category-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  background: linear-gradient(135deg, #f0faf0, #e6f0e6);
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+.category-header:hover { background: linear-gradient(135deg, #e6f0e6, #d1e9d1); }
+.category-header h2 {
+  color: #166534;
+  font-size: 22px;
+  margin: 0;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+.category-header:hover h2 { transform: translateX(5px); }
+
+.chevron-icon {
+  color: #166534;
+  transition: transform 0.4s ease;
+  font-size: 14px;
+}
+.chevron-icon.rotate { transform: rotate(180deg); }
+
+/* Category items */
+.category-items {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+}
+.category-items.expanded {
+  max-height: 3000px;
+  transition: max-height 0.5s cubic-bezier(1, 0, 1, 0);
+}
+
+.menu-item {
+  display: flex;
+  padding: 20px;
+  border-bottom: 1px solid rgba(209, 233, 209, 0.5);
+  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.menu-item:last-child { border-bottom: none; }
+.menu-item:hover { background-color: rgba(240, 247, 255, 0.7); }
+.menu-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background-color: rgba(22, 101, 52, 0.05);
+  transition: width 0.3s ease;
+  z-index: 0;
+}
+.menu-item:hover::after { width: 100%; }
+
+/* Image styling */
+.item-image {
+  width: 150px;
+  height: 120px;
+  margin-right: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.menu-item:hover .item-image {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+.food-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+}
+.menu-item:hover .food-image { transform: scale(1.12); }
+.item-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.menu-item:hover .item-image::after { opacity: 1; }
+
+/* Vegetarian badge */
+.vegetarian-badge-overlay {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  transform: scale(1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 2;
+}
+.menu-item:hover .vegetarian-badge-overlay {
+  transform: scale(1.1) rotate(10deg);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+.item-info {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+.item-info h3 {
+  color: #0c4a6e;
+  font-size: 20px;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+.menu-item:hover .item-info h3 { color: #0f5694; }
+.description {
+  color: #6b7280;
+  margin: 0 0 12px 0;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.item-price {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.item-price span:first-child {
+  color: #166534;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: rgba(240, 250, 240, 0.7);
+  padding: 4px 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(22, 101, 52, 0.1);
+}
+
+.vegetarian-badge {
+  display: flex;
+  align-items: center;
+  color: #166534;
+  font-size: 14px;
+  background-color: rgba(209, 233, 209, 0.3);
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+.vegetarian-badge:hover { background-color: rgba(209, 233, 209, 0.7); }
+.leaf-icon { margin-right: 4px; }
+
+/* Promotions section */
+.menu-promotions { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.promo-card {
+  background: linear-gradient(135deg, #f0f7ff, #e6f0ff);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(12, 74, 110, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+.promo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(12, 74, 110, 0.15);
+}
+.promo-card::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  right: -50px;
+  bottom: -50px;
+  transition: all 0.5s ease;
+}
+.promo-card:hover::after { transform: scale(3); }
+.promo-content { z-index: 1; }
+.promo-content h3 { color: #0c4a6e; margin: 0 0 8px 0; font-size: 18px; }
+.promo-content p { color: #6b7280; margin: 0; font-size: 14px; line-height: 1.5; }
+.promo-badge {
+  background-color: #0c4a6e;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  z-index: 1;
+  box-shadow: 0 4px 8px rgba(12, 74, 110, 0.3);
+  transition: transform 0.3s ease;
+}
+.promo-card:hover .promo-badge { transform: rotate(10deg) scale(1.1); }
+
+/* Footer */
+.menu-footer {
+  text-align: center;
+  margin-top: 60px;
+  color: #6b7280;
+  font-size: 14px;
+  padding: 20px;
+  border-top: 1px solid rgba(209, 233, 209, 0.5);
+}
+.menu-footer p { margin: 6px 0; line-height: 1.6; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .menu-item { flex-direction: column; }
+  .item-image { width: 100%; height: 200px; margin-right: 0; margin-bottom: 15px; }
+  .menu-promotions { grid-template-columns: 1fr; }
+  .item-price { margin-top: 12px; }
+  .menu-header h1 { font-size: 26px; }
+  .menu-category { margin-bottom: 20px; }
+}
+
+@media (max-width: 480px) {
+  .item-image { height: 180px; }
+  .item-price { flex-direction: column; align-items: flex-start; }
+  .vegetarian-badge { margin-top: 6px; }
+}

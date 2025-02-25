@@ -5,8 +5,11 @@ const ServiceCard = ({ icon, title, description }) => {
   return (
     <div className="service-card">
       <div className="service-icon">{icon}</div>
-      <h3>{title}</h3>
-      <p>{description}</p>
+      <div className="card-content">
+        <h3>{title}</h3>
+        <p>{description}</p>
+      </div>
+      <div className="card-overlay"></div>
     </div>
   );
 };
@@ -64,14 +67,15 @@ const Service = () => {
 
   return (
     <div className="service-page">
-      {/* Header */}
+      {/* Enhanced Header */}
       <div className="service-header">
         <div className="coffee-icon">☕</div>
         <h1>Our Services</h1>
         <p className="service-subtitle">Providing quality food and exceptional service to our university community</p>
+        <div className="header-decoration"></div>
       </div>
 
-      {/* Services Grid */}
+      {/* Services Grid - Enhanced */}
       <div className="services-section">
         <h2>What We Offer</h2>
         <div className="services-grid">
@@ -86,7 +90,7 @@ const Service = () => {
         </div>
       </div>
 
-      {/* Hours and Information */}
+      {/* Hours and Information - Enhanced */}
       <div className="info-section">
         <h2>Hours & Information</h2>
         
@@ -127,7 +131,7 @@ const Service = () => {
         </div>
       </div>
 
-      {/* FAQ Section */}
+      {/* FAQ Section - Enhanced */}
       <div className="faq-section">
         <h2>Frequently Asked Questions</h2>
         
@@ -145,8 +149,9 @@ const Service = () => {
         </div>
       </div>
 
-      {/* Sustainability Note */}
+      {/* Sustainability Note - Enhanced */}
       <div className="sustainability-section">
+        <div className="sustainability-icon">🌱</div>
         <h3>Our Commitment to Sustainability</h3>
         <p>
           We're proud to use locally-sourced ingredients where possible and have implemented 
@@ -155,7 +160,7 @@ const Service = () => {
         </p>
       </div>
 
-      {/* Footer note */}
+      {/* Footer note - Enhanced */}
       <div className="service-footer">
         <p>Service hours may vary during holidays and exam periods.</p>
         <p>For special accommodations, please contact us at least 24 hours in advance.</p>
