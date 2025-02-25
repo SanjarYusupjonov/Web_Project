@@ -1,16 +1,8 @@
-# React JS Startup and small business website template
+# React JS University Canteen Website
 
-[![Buy Me a Coffee](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=yourname&button_colour=FFDD00&font_colour=000000&font_family=Comic&outline_colour=000000&coffee_colour=ffffff)](https://www.buymeacoffee.com/akugbeStephen)
+### This project was created using HTML, CSS, Bootstrap and React.
 
-### This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-# Screenshot
-
-![mld edit](https://user-images.githubusercontent.com/43953425/212030864-cf3aa272-e070-4e1b-8e25-f488ca56873e.png)
-
-
-
-The Live demo is available [Here](https://mld-prototype.netlify.app)
+The Live demo is available [Here](https://ubiquitous-kelpie-09bb0e.netlify.app/)
 
 ## Description
 
