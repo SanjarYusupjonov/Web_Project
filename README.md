@@ -38,9 +38,9 @@ npm install
 npm install bootstrap
 ```
 4️⃣ Start the Development Server
-bash
-Copy
+```bash
 npm start
+```
 This will start the development server, and you can view the website by navigating to http://localhost:3000 in your browser.
 
 🛠️ How to Contribute
@@ -48,9 +48,9 @@ Fork the Repository – Click the "Fork" button on the top right of the reposito
 
 Clone Your Fork – Clone the forked repository to your local machine:
 
-bash
-Copy
-git clone https://github.com/YourUsername/Web_Project.git
+```bash
+git clone https://github.com/SanjarYusupjonov/Web_Project.git
+```
 Create a New Branch – Create a branch for your changes:
 
 bash
