@@ -12,7 +12,7 @@ This is a React-based web application featuring a responsive design and interact
 
 To use this template:
 1. Clone the repository to your local machine,
-   ``` git clone https://github.com/SanjarYusupjonov/Web_Project.git
+   ## git clone https://github.com/SanjarYusupjonov/Web_Project.git
 3. run `npm install` to install all the required dependencies and
 4. run `npm start` to view the website locally.
 Feel free to edit and make changes. 
