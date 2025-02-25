@@ -26,18 +26,17 @@ Follow these steps to run the project locally:
 ```bash
 git clone https://github.com/SanjarYusupjonov/Web_Project.git
 cd Web_Project
-2️⃣ Check whether Node is installed or not
-bash
+```
+2️⃣ Check whether Node is installed or not  [Click Here](https://nodejs.org/en/download)  
+```bash
 Copy
 node -v
 ``` 
-If Node.js is not installed, you can download it from here.
-
 3️⃣ Install Dependencies
-bash
-Copy
+```bash
 npm install
 npm install bootstrap
+```
 4️⃣ Start the Development Server
 bash
 Copy
