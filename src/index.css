@@ -2,23 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import Lato font */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+/* Global styles */
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
 }
 
+/* Footer background */
 .footer {
   background: url(./images/footer.svg) top center no-repeat;
   background-size: cover;
 }
 
+/* Call-to-action (CTA) section */
 .cta {
-  background: linear-gradient(rgba(2,2,2,.5),rgba(0,0,0,.6)),url(https://i.pinimg.com/736x/2f/93/ec/2f93ec813b868df50763a5dcd68e4e3a.jpg) fixed center center;
+  background: linear-gradient(rgba(2,2,2,.5), rgba(0,0,0,.6)), 
+              url(https://i.pinimg.com/736x/2f/93/ec/2f93ec813b868df50763a5dcd68e4e3a.jpg) 
+              fixed center center;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-
-

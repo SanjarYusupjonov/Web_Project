@@ -3,11 +3,13 @@ import "../style/menu.css";
 import NavBar from '../components/Navbar/NavBar';
 import Footer from '../components/Footer';
 
+// Component for rendering a collapsible menu category
 const MenuCategory = ({ title, items }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   
   return (
     <div className="menu-category">
+      {/* Button to toggle category expansion */}
       <button 
         className="category-header"
         onClick={() => setIsExpanded(!isExpanded)}
@@ -15,6 +17,7 @@ const MenuCategory = ({ title, items }) => {
         <h2>{title}</h2>
         <span className={`chevron-icon ${isExpanded ? 'rotate' : ''}`}>▼</span>
       </button>
+      {/* List of menu items, shown when expanded */}
       <div className={`category-items ${isExpanded ? 'expanded' : ''}`}>
         {items.map((item, index) => (
           <div key={index} className="menu-item">
@@ -38,7 +41,7 @@ const MenuCategory = ({ title, items }) => {
 };
 
 const Menu = () => {
-  // Sample menu data
+  // Sample menu data for different categories
   const menuData = {
     mainCourse: [
       {
@@ -106,27 +109,38 @@ const Menu = () => {
 
   return (
     <>
-    <NavBar/>
-    <div className="menu-page" data-aos="zoom-in-down">
-      <div className="menu-header">
-        <div className="utensils-icon">🍽️</div>
-        <h1>University Canteen Menu</h1>
-        <p className="menu-subtitle">Delicious and nutritious meals to fuel your studies</p>
+      {/* Main wrapper for the entire page */}
+      <div>
+        {/* Navigation bar component */}
+        <NavBar />
+
+        {/* Menu page content */}
+        <div className="menu-page" data-aos="zoom-in-down">
+          {/* Header section for the menu */}
+          <div className="menu-header">
+            <div className="utensils-icon">🍽️</div>
+            <h1>University Canteen Menu</h1>
+            <p className="menu-subtitle">Delicious and nutritious meals to fuel your studies</p>
+          </div>
+          
+          {/* Container for menu categories */}
+          <div className="menu-content">
+            <MenuCategory title="Appetizers" items={menuData.appetizers} />
+            <MenuCategory title="Main Courses" items={menuData.mainCourse} />
+            <MenuCategory title="Desserts" items={menuData.desserts} />
+            <MenuCategory title="Beverages" items={menuData.beverages} />
+          </div>
+          
+          {/* Footer section with additional menu information */}
+          <div className="menu-footer">
+            <p>Menu items and availability may change based on seasonal ingredients.</p>
+            <p>Please inform our staff of any allergies or dietary requirements.</p>
+          </div>
+        </div>
+
+        {/* Footer component */}
+        <Footer />
       </div>
-      
-      <div className="menu-content">
-        <MenuCategory title="Appetizers" items={menuData.appetizers} />
-        <MenuCategory title="Main Courses" items={menuData.mainCourse} />
-        <MenuCategory title="Desserts" items={menuData.desserts} />
-        <MenuCategory title="Beverages" items={menuData.beverages} />
-      </div>
-      
-      <div className="menu-footer">
-        <p>Menu items and availability may change based on seasonal ingredients.</p>
-        <p>Please inform our staff of any allergies or dietary requirements.</p>
-      </div>
-    </div>
-    <Footer/>
     </>
   );
 };

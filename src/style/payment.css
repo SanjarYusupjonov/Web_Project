@@ -1,4 +1,4 @@
-
+/* Payment form container */
 .payment-container {
     margin-top: 3cm;
     max-width: 400px;
@@ -9,17 +9,20 @@
     text-align: center;
 }
 
+/* Form heading */
 h2 {
     margin-bottom: 20px;
     color: darkblue;
 }
 
+/* Error message styling */
 .error-message {
     color: red;
     font-size: 14px;
     margin-bottom: 10px;
 }
 
+/* Input field group */
 .input-group {
     margin-bottom: 15px;
     text-align: left;
@@ -40,12 +43,13 @@ h2 {
     font-size: 16px;
 }
 
+/* Arrange elements in a row */
 .input-row {
     display: flex;
     justify-content: space-between;
 }
 
-
+/* Payment button */
 .pay-button {
     width: 100%;
     padding: 10px;
@@ -56,4 +60,3 @@ h2 {
     cursor: pointer;
     font-size: 16px;
 }
-      

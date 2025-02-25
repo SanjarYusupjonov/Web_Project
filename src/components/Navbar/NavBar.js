@@ -1,17 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
 import logo from "../../images/newuu-logo.png"; // Assuming this is your logo path
-import NavLinks from "./NavLinks"; // Assuming this is your navigation links component
-import "./NavBar.css"; // Use a separate CSS file for clarity
+import NavLinks from "./NavLinks"; // Importing the navigation links component
+import "./../../style/NavBar.css"; // Importing the CSS file for styling
 
 const NavBar = () => {
+  // State to track whether the navbar is at the top of the page
   const [top, setTop] = useState(!window.scrollY);
+  // State to manage the mobile menu toggle
   const [isOpen, setIsOpen] = useState(false);
 
+  // Function to toggle the mobile menu open/close state
   function handleClick() {
     setIsOpen(!isOpen);
   }
 
+  // Effect to change navbar style based on scroll position
   useEffect(() => {
     const scrollHandler = () => {
       window.pageYOffset > 10 ? setTop(false) : setTop(true);
@@ -23,6 +27,7 @@ const NavBar = () => {
   return (
     <nav className={`navbar ${!top && "navbar-scrolled"}`}>
       <div className="navbar-content">
+        {/* Logo section */}
         <div className="logo-container px-4 pr-3">
           <HashLink smooth to="/#hero">
             <img
@@ -36,7 +41,10 @@ const NavBar = () => {
             />
           </HashLink>
         </div>
+
+        {/* Navigation menu */}
         <div className="menu-container">
+          {/* Mobile menu toggle button */}
           <button className="menu-toggle" onClick={handleClick}>
             <svg
               className="menu-icon"
@@ -44,6 +52,7 @@ const NavBar = () => {
               viewBox="0 0 24 24"
             >
               {isOpen && (
+                // Close (X) icon for the open mobile menu
                 <path
                   fillRule="evenodd"
                   clipRule="evenodd"
@@ -51,6 +60,7 @@ const NavBar = () => {
                 />
               )}
               {!isOpen && (
+                // Hamburger icon for the closed mobile menu
                 <path
                   fillRule="evenodd"
                   d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
@@ -58,9 +68,13 @@ const NavBar = () => {
               )}
             </svg>
           </button>
+
+          {/* Desktop navigation links */}
           <div className="desktop-links">
             <NavLinks />
           </div>
+
+          {/* Mobile navigation menu */}
           <div
             className={`mobile-menu ${
               isOpen ? "mobile-menu-open" : "mobile-menu-closed"

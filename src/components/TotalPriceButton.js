@@ -1,20 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+// Component to display a button showing total price and linking to payment
 const TotalPriceButton = ({ totalPrice }) => {
   return (
+    // Link component for navigation, styled as a button
     <Link
-      to={totalPrice > 0 ? "/payment" : "#"}
+      to={totalPrice > 0 ? "/payment" : "#"} // Directs to payment page if totalPrice > 0, otherwise stays on current page
       className={`text-white inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-2xl sm:w-auto sm:mb-0 ${
-        totalPrice > 0 ? "bg-blue-900 hover:bg-blue-800" : "bg-gray-500 cursor-not-allowed"
+        totalPrice > 0 
+          ? "bg-blue-900 hover:bg-blue-800" // Active styling when there’s a total
+          : "bg-gray-500 cursor-not-allowed" // Disabled styling when total is 0
       }`}
-      onClick={(e) => totalPrice === 0 && e.preventDefault()} 
+      onClick={(e) => totalPrice === 0 && e.preventDefault()} // Prevents navigation if totalPrice is 0
     >
       {totalPrice > 0 ? (
+        // Display total price and arrow icon when there’s an order
         <>
-          Total: ${totalPrice.toFixed(2)}
+          Total: ${totalPrice.toFixed(2)} {/* Shows formatted total price */}
           <svg
-            className="w-4 h-4 ml-1"
+            className="w-4 h-4 ml-1" // Small arrow icon for visual cue
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor"
@@ -27,6 +32,7 @@ const TotalPriceButton = ({ totalPrice }) => {
           </svg>
         </>
       ) : (
+        // Display message when no order has been placed
         "You haven’t ordered yet"
       )}
     </Link>

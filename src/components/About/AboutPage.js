@@ -1,14 +1,14 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";   
-    // import img1 from "./assets/about.jpg"
-import img2 from "../../images/about-2.jpg"
-import img1 from "../../images/about.jpg";
-import "../../style/about.css";
+import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap for styling
+import img2 from "../../images/about-2.jpg"; // Import image for the first section
+import img1 from "../../images/about.jpg"; // Import image for the second section
+import "../../style/about.css"; // Import custom CSS for additional styling
 
 const AboutPage = () => {
   return (
     <div className="container my-5" data-aos="zoom-in">
-    <div className="row mt-8">
+      <div className="row mt-8">
+        {/* First column with an image */}
         <div className="col-lg-6">
           <img 
             src={img2}
@@ -16,6 +16,7 @@ const AboutPage = () => {
             className="img-fluid rounded shadow w-48 hover-scale" 
           />
         </div>
+        {/* Second column with text content */}
         <div className="col-lg-6">
           <h1 className="display-4 text-primary">Welcome to UniBites</h1>
           <p className="lead">
@@ -32,8 +33,10 @@ const AboutPage = () => {
           </p>
         </div>
       </div>
+
       <div className="row mt-5">
-         <div className="col-lg-6">
+        {/* Left column with a list of features */}
+        <div className="col-lg-6">
           <h2 className="text-success display-5">Why Choose Us?</h2>
           <ul className="list-group list-group-flush fs-5">
             <li className="list-group-item">Fresh and locally sourced ingredients</li>
@@ -41,10 +44,10 @@ const AboutPage = () => {
             <li className="list-group-item">A cozy and modern ambiance</li>
             <li className="list-group-item">Fast service with a smile</li>
             <li className="list-group-item">Special discounts for students and faculty</li>
-            <li className="list-group-item">Fast service with a smile</li>
-            
+            <li className="list-group-item">Fast service with a smile</li> {/* Duplicate item */}
           </ul>
         </div>
+        {/* Right column with another image */}
         <div className="col-lg-6">
           <img 
             src={img1}

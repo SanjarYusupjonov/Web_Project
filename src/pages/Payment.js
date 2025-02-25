@@ -4,11 +4,13 @@ import NavBar from "../components/Navbar/NavBar";
 import Footer from "../components/Footer";
 
 function Payment() {
+  // State management for payment form inputs and error messages
   const [cardNumber, setCardNumber] = useState("");
   const [expiryDate, setExpiryDate] = useState("");
   const [cvv, setCvv] = useState("");
   const [error, setError] = useState("");
 
+  // Format and validate card number input (16 digits with spaces every 4)
   const handleCardNumberChange = (e) => {
     let value = e.target.value.replace(/\D/g, ""); 
     value = value.replace(/(.{4})/g, "$1 ").trim(); 
@@ -17,6 +19,7 @@ function Payment() {
     }
   };
 
+  // Format and validate expiry date input (MM/YY format)
   const handleExpiryDateChange = (e) => {
     let value = e.target.value.replace(/\D/g, ""); 
     if (value.length > 4) return; 
@@ -26,6 +29,7 @@ function Payment() {
     setExpiryDate(value);
   };
 
+  // Validate CVV input (3 digits only)
   const handleCvvChange = (e) => {
     let value = e.target.value.replace(/\D/g, ""); 
     if (value.length <= 3) {
@@ -33,6 +37,7 @@ function Payment() {
     }
   };
 
+  // Handle form submission and payment validation
   const handlePayment = (e) => {
     e.preventDefault();
     
@@ -65,56 +70,66 @@ function Payment() {
 
   return (
     <>
-    <div>
+      {/* Main wrapper for the entire page */}
+      <div>
+        {/* Navigation bar component */}
         <NavBar />
-    </div>
-    <div className="payment-container">
-      <h2>Enter Payment Details</h2>
-      {error && <p className="error-message">{error}</p>}
 
-      <form onSubmit={handlePayment}>
-        <div className="input-group">
-          <label>Card Number</label>
-          <input
-            type="text"
-            value={cardNumber}
-            onChange={handleCardNumberChange}
-            placeholder="1234 5678 9101 1121"
-            maxLength="19"
-            required
-          />
+        {/* Payment form container */}
+        <div className="payment-container">
+          <h2>Enter Payment Details</h2>
+          {/* Display error message if validation fails */}
+          {error && <p className="error-message">{error}</p>}
+
+          {/* Payment form */}
+          <form onSubmit={handlePayment}>
+            <div className="input-group">
+              <label>Card Number</label>
+              <input
+                type="text"
+                value={cardNumber}
+                onChange={handleCardNumberChange}
+                placeholder="1234 5678 9101 1121"
+                maxLength="19"
+                required
+              />
+            </div>
+
+            {/* Row for expiry date and CVV inputs */}
+            <div className="input-row">
+              <div className="input-group">
+                <label>Expiry Date</label>
+                <input
+                  type="text"
+                  value={expiryDate}
+                  onChange={handleExpiryDateChange}
+                  placeholder="MM/YY"
+                  maxLength="5"
+                  required
+                />
+              </div>
+
+              <div className="input-group">
+                <label>CVV</label>
+                <input
+                  type="text"
+                  value={cvv}
+                  onChange={handleCvvChange}
+                  placeholder="123"
+                  maxLength="3"
+                  required
+                />
+              </div>
+            </div>
+
+            {/* Submit button for payment */}
+            <button type="submit" className="pay-button">Pay Now</button>
+          </form>
         </div>
 
-        <div className="input-row">
-          <div className="input-group">
-            <label>Expiry Date</label>
-            <input
-              type="text"
-              value={expiryDate}
-              onChange={handleExpiryDateChange}
-              placeholder="MM/YY"
-              maxLength="5"
-              required
-            />
-          </div>
-
-          <div className="input-group">
-            <label>CVV</label>
-            <input
-              type="text"
-              value={cvv}
-              onChange={handleCvvChange}
-              placeholder="123"
-              maxLength="3"
-              required
-            />
-          </div>
-        </div>
-
-        <button type="submit" className="pay-button">Pay Now</button>
-      </form>
-    </div>
-    <Footer />
+        {/* Footer component */}
+        <Footer />
+      </div>
     </>
   );
 }

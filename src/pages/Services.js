@@ -3,6 +3,7 @@ import '../style/service.css';
 import NavBar from '../components/Navbar/NavBar';
 import Footer from '../components/Footer';
 
+// Component for displaying individual service cards
 const ServiceCard = ({ icon, title, description }) => {
     return (
       <div className="service-card">
@@ -13,7 +14,8 @@ const ServiceCard = ({ icon, title, description }) => {
     );
   };
   
-  const ServiceInfoItem = ({ icon, title, children }) => {
+// Component for displaying informational items with icons
+const ServiceInfoItem = ({ icon, title, children }) => {
     return (
       <div className="info-item">
         <div className="info-icon">{icon}</div>
@@ -25,7 +27,8 @@ const ServiceCard = ({ icon, title, description }) => {
     );
   };
   
-  const Service = () => {
+const Service = () => {
+    // Data for services offered
     const services = [
       {
         icon: "☕",
@@ -49,6 +52,7 @@ const ServiceCard = ({ icon, title, description }) => {
       }
     ];
   
+    // Data for frequently asked questions
     const faqs = [
       {
         question: "Do you accommodate dietary restrictions?",
@@ -66,110 +70,116 @@ const ServiceCard = ({ icon, title, description }) => {
 
     return (
         <>
-        <NavBar />
-        <div id="service" className="bg-gray-100" >
-          <div className="service-page" data-aos="zoom-in-down">
-            {/* Header */}
-            <div className="service-header">
-                <div className="coffee-icon">☕</div>
-                <h1>Our Services</h1>
-                <p className="service-subtitle">Providing quality food and exceptional service to our university community</p>
-            </div>
+          {/* Main wrapper for the entire page */}
+          <div>
+            {/* Navigation bar component */}
+            <NavBar />
 
-            {/* Services Grid */}
-            <div className="services-section">
-                <h2>What We Offer</h2>
-                <div className="services-grid">
-                {services.map((service, index) => (
-                    <ServiceCard 
-                    key={index} 
-                    icon={service.icon} 
-                    title={service.title} 
-                    description={service.description} 
-                    />
-                ))}
-                </div>
-            </div>
-
-            {/* Hours and Information */}
-            <div className="info-section">
-                <h2>Hours & Information</h2>
-                
-                <div className="info-grid">
-                <div className="info-column">
-                    <ServiceInfoItem icon="🕒" title="Operating Hours">
-                    <ul className="hours-list">
-                        <li><span className="bold">Breakfast:</span> 7:30 AM - 10:00 AM</li>
-                        <li><span className="bold">Lunch:</span> 11:30 AM - 2:30 PM</li>
-                        <li><span className="bold">Dinner:</span> 5:00 PM - 8:00 PM</li>
-                        <li><span className="bold">Weekend:</span> 8:00 AM - 7:00 PM</li>
-                    </ul>
-                    </ServiceInfoItem>
-
-                    <ServiceInfoItem icon="📍" title="Location">
-                    <p>
-                        Main Campus Building (MATH), Basement<br />
-                        Movarounnahr street 1, 100000
-                    </p>
-                    </ServiceInfoItem>
+            {/* Service page content */}
+            <div id="service" className="bg-gray-100">
+              <div className="service-page" data-aos="zoom-in-down">
+                {/* Header section for services */}
+                <div className="service-header">
+                  <div className="coffee-icon">☕</div>
+                  <h1>Our Services</h1>
+                  <p className="service-subtitle">Providing quality food and exceptional service to our university community</p>
                 </div>
 
-                <div className="info-column">
-                    <ServiceInfoItem icon="📞" title="Contact Us">
-                    <p>
-                        Phone: +998 (71) 202-41-11<br />
-                        Extension: 1234 (from university phones)
-                    </p>
-                    </ServiceInfoItem>
-
-                    <ServiceInfoItem icon="📧" title="Reservations & Inquiries">
-                    <p>
-                        For group reservations or catering services:<br />
-                        <span className="email">canteen@newuu.uz</span>
-                    </p>
-                    </ServiceInfoItem>
+                {/* Section displaying available services */}
+                <div className="services-section">
+                  <h2>What We Offer</h2>
+                  <div className="services-grid">
+                    {services.map((service, index) => (
+                      <ServiceCard 
+                        key={index} 
+                        icon={service.icon} 
+                        title={service.title} 
+                        description={service.description} 
+                      />
+                    ))}
+                  </div>
                 </div>
-                </div>
-            </div>
 
-            {/* FAQ Section */}
-            <div className="faq-section">
-                <h2>Frequently Asked Questions</h2>
-                
-                <div className="faq-list">
-                {faqs.map((faq, index) => (
-                    <div key={index} className="faq-item">
-                    <div className="faq-question">
-                        <h3>{faq.question}</h3>
+                {/* Section for operational hours and contact information */}
+                <div className="info-section">
+                  <h2>Hours & Information</h2>
+                  <div className="info-grid">
+                    <div className="info-column">
+                      <ServiceInfoItem icon="🕒" title="Operating Hours">
+                        <ul className="hours-list">
+                          <li><span className="bold">Breakfast:</span> 7:30 AM - 10:00 AM</li>
+                          <li><span className="bold">Lunch:</span> 11:30 AM - 2:30 PM</li>
+                          <li><span className="bold">Dinner:</span> 5:00 PM - 8:00 PM</li>
+                          <li><span className="bold">Weekend:</span> 8:00 AM - 7:00 PM</li>
+                        </ul>
+                      </ServiceInfoItem>
+
+                      <ServiceInfoItem icon="📍" title="Location">
+                        <p>
+                          Main Campus Building (MATH), Basement<br />
+                          Movarounnahr street 1, 100000
+                        </p>
+                      </ServiceInfoItem>
                     </div>
-                    <div className="faq-answer">
-                        <p>{faq.answer}</p>
+
+                    <div className="info-column">
+                      <ServiceInfoItem icon="📞" title="Contact Us">
+                        <p>
+                          Phone: +998 (71) 202-41-11<br />
+                          Extension: 1234 (from university phones)
+                        </p>
+                      </ServiceInfoItem>
+
+                      <ServiceInfoItem icon="📧" title="Reservations & Inquiries">
+                        <p>
+                          For group reservations or catering services:<br />
+                          <span className="email">canteen@newuu.uz</span>
+                        </p>
+                      </ServiceInfoItem>
                     </div>
-                    </div>
-                ))}
+                  </div>
                 </div>
+
+                {/* FAQ section */}
+                <div className="faq-section">
+                  <h2>Frequently Asked Questions</h2>
+                  <div className="faq-list">
+                    {faqs.map((faq, index) => (
+                      <div key={index} className="faq-item">
+                        <div className="faq-question">
+                          <h3>{faq.question}</h3>
+                        </div>
+                        <div className="faq-answer">
+                          <p>{faq.answer}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Sustainability commitment note */}
+                <div className="sustainability-section">
+                  <h3>Our Commitment to Sustainability</h3>
+                  <p>
+                    We're proud to use locally-sourced ingredients where possible and have implemented 
+                    comprehensive recycling and composting programs. Our to-go containers are made from 
+                    biodegradable materials as part of our university-wide green initiative.
+                  </p>
+                </div>
+
+                {/* Footer note for service-specific information */}
+                <div className="service-footer">
+                  <p>Service hours may vary during holidays and exam periods.</p>
+                  <p>For special accommodations, please contact us at least 24 hours in advance.</p>
+                </div>
+              </div>
             </div>
 
-            {/* Sustainability Note */}
-            <div className="sustainability-section">
-                <h3>Our Commitment to Sustainability</h3>
-                <p>
-                We're proud to use locally-sourced ingredients where possible and have implemented 
-                comprehensive recycling and composting programs. Our to-go containers are made from 
-                biodegradable materials as part of our university-wide green initiative.
-                </p>
-            </div>
-
-            {/* Footer note */}
-            <div className="service-footer">
-                <p>Service hours may vary during holidays and exam periods.</p>
-                <p>For special accommodations, please contact us at least 24 hours in advance.</p>
-            </div>
-            </div>
-        </div>
-        <Footer />
+            {/* Footer component */}
+            <Footer />
+          </div>
         </>
-    )
-}
+    );
+};
 
 export default Service;

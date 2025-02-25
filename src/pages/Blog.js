@@ -3,6 +3,7 @@ import NavBar from '../components/Navbar/NavBar';
 import Footer from '../components/Footer';
 import '../style/blog.css'; 
 
+// Array of blog posts data
 const blogPosts = [
   {
     id: 1,
@@ -49,96 +50,112 @@ const blogPosts = [
 ];
 
 function Blog() {
-  const [selectedPost, setSelectedPost] = useState(null);
-  const [feedback, setFeedback] = useState("");
-  const [feedbackType, setFeedbackType] = useState("New Meal Request");
-  const [feedbackSubmitted, setFeedbackSubmitted] = useState(false);
-  const [reactions, setReactions] = useState({ 
+  // State management for blog interactions
+  const [selectedPost, setSelectedPost] = useState(null); // Tracks the currently selected blog post
+  const [feedback, setFeedback] = useState(""); // Stores user feedback text
+  const [feedbackType, setFeedbackType] = useState("New Meal Request"); // Tracks feedback category
+  const [feedbackSubmitted, setFeedbackSubmitted] = useState(false); // Indicates if feedback was submitted
+  const [reactions, setReactions] = useState({ // Tracks emoji reactions for posts
     "👍": 0, 
     "😍": 0, 
     "🤔": 0, 
     "👎": 0 
   });
 
+  // Handle feedback form submission
   const handleFeedbackSubmit = () => {
     if (feedback.trim()) {
       setFeedbackSubmitted(true);
     }
   };
 
+  // Handle emoji reaction clicks
   const handleReaction = (emoji) => {
     setReactions((prev) => ({ ...prev, [emoji]: prev[emoji] + 1 }));
   };
 
   return (
     <>
-    <div>
+      {/* Main wrapper for the entire page */}
+      <div>
+        {/* Navigation bar component */}
         <NavBar />
-    </div>
-    <div className="a">
-    <div className="my-4 py-4 justify-center items-center mt-14 w-full bg-white py-12 lg:py-24 " data-aos="zoom-in-down">
-        <h2 className="my-2 text-center text-3xl text-blue-900 uppercase font-bold">Blog Posts</h2>
-        
-        <div className='flex justify-center'>
-            <div className='w-24 border-b-4 border-blue-900'></div>
-        </div>
-        <h2 className="mt-4 mx-12 text-center text-xl lg:text-2xl font-semibold text-blue-900">We are deeply committed to the growth and success of our clients.</h2>
-    </div>
-    <div className="blog-container" data-aos="zoom-in-down">
-      {selectedPost ? (
-        <div className="blog-detail mx-auto px-4 lg:px-20">
-          <button onClick={() => { setSelectedPost(null); setFeedbackSubmitted(false); setFeedback(""); }}>← Back</button>
-          <h2>{selectedPost.title}</h2>
-          <img src={selectedPost.image} alt={selectedPost.title} />
-          <p>{selectedPost.content}</p>
 
-          {selectedPost.id === 6 && (
-            <div className="feedback-section">
-              {!feedbackSubmitted ? (
-                <>
-                  <textarea
-                    placeholder="Leave your feedback here..."
-                    value={feedback}
-                    onChange={(e) => setFeedback(e.target.value)}
-                  />
-                  <select value={feedbackType} onChange={(e) => setFeedbackType(e.target.value)}>
-                    <option>New Meal Request</option>
-                    <option>General Feedback</option>
-                  </select>
-                  <button onClick={handleFeedbackSubmit}>Submit</button>
-                </>
-              ) : (
-                <p>Thank you for your feedback! 🎉</p>
-              )}
+        {/* Blog content section */}
+        <div className="a">
+          {/* Header section for the blog page */}
+          <div className="my-4 py-4 justify-center items-center mt-14 w-full bg-white py-12 lg:py-24" data-aos="zoom-in-down">
+            <h2 className="my-2 text-center text-3xl text-blue-900 uppercase font-bold">Blog Posts</h2>
+            <div className='flex justify-center'>
+              <div className='w-24 border-b-4 border-blue-900'></div>
             </div>
-          )}
+            <h2 className="mt-4 mx-12 text-center text-xl lg:text-2xl font-semibold text-blue-900">
+              Fueling your day with delicious, affordable bites!            </h2>
+          </div>
 
-          <div className="reaction-section">
-            {Object.keys(reactions).map((emoji) => (
-              <button key={emoji} onClick={() => handleReaction(emoji)}>
-                {emoji} {reactions[emoji]}
-              </button>
-            ))}
+          {/* Blog posts display area */}
+          <div className="blog-container" data-aos="zoom-in-down">
+            {selectedPost ? (
+              // Detailed view of a selected blog post
+              <div className="blog-detail mx-auto px-4 lg:px-20">
+                <button onClick={() => { setSelectedPost(null); setFeedbackSubmitted(false); setFeedback(""); }}>
+                  ← Back
+                </button>
+                <h2>{selectedPost.title}</h2>
+                <img src={selectedPost.image} alt={selectedPost.title} />
+                <p>{selectedPost.content}</p>
+
+                {/* Feedback section for post ID 6 */}
+                {selectedPost.id === 6 && (
+                  <div className="feedback-section">
+                    {!feedbackSubmitted ? (
+                      <>
+                        <textarea
+                          placeholder="Leave your feedback here..."
+                          value={feedback}
+                          onChange={(e) => setFeedback(e.target.value)}
+                        />
+                        <select value={feedbackType} onChange={(e) => setFeedbackType(e.target.value)}>
+                          <option>New Meal Request</option>
+                          <option>General Feedback</option>
+                        </select>
+                        <button onClick={handleFeedbackSubmit}>Submit</button>
+                      </>
+                    ) : (
+                      <p>Thank you for your feedback! 🎉</p>
+                    )}
+                  </div>
+                )}
+
+                {/* Reaction buttons for user engagement */}
+                <div className="reaction-section">
+                  {Object.keys(reactions).map((emoji) => (
+                    <button key={emoji} onClick={() => handleReaction(emoji)}>
+                      {emoji} {reactions[emoji]}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              // List view of all blog posts
+              <div className="blog-list">
+                {blogPosts.map((post) => (
+                  <div key={post.id} className="blog-card" onClick={() => setSelectedPost(post)}>
+                    <img src={post.image} alt={post.title} />
+                    <h3>{post.title}</h3>
+                    <p>{post.content.substring(0, 50)}...</p>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
-      ) : (
-        <div className="blog-list">
-          {blogPosts.map((post) => (
-            <div key={post.id} className="blog-card" onClick={() => setSelectedPost(post)}>
-              <img src={post.image} alt={post.title} />
-              <h3>{post.title}</h3>
-              <p>{post.content.substring(0, 50)}...</p>
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-    </div>
-    <Footer />
+
+        {/* Footer component */}
+        <Footer />
+      </div>
     </>
   );
 }
 
 export default Blog;
-
-
