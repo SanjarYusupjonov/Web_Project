@@ -4,46 +4,74 @@ This document outlines the structure of the `src` folder in the project.
 
 ---
 
-## 📁 `src`  
+# Project Folder Structure: `src`
+
+This document outlines the structure of the `src` folder in the project.
+
+---
+
+## 📁 `src/`  
 The `src` folder contains the main source code for the React-based University Canteen Website. Below is the folder structure:
-
-src/
-├── components/ # Reusable React components
-├── images/ # Image assets used in the project
-├── pages/ # Page components for different routes
-├── style/ # Custom CSS or styling files
-├── App.js # Main application component
-├── index.css # Global styles for the application
-├── index.js # Entry point for the React application
-└── README.md # Documentation for the src folder
-
 
 ---
 
 ### 📂 `components/`  
-This folder contains reusable React components such as:
-components/
-- **`Cta.js`** – A call-to-action button or section (e.g., "Order Now").
-- **`CustomHook.js`** – A custom React hook (if used for navigation or other logic).
-- **`Footer.js`** – The footer component for the website.
-- **`Hero.js`** – The hero section component (e.g., a banner or introductory section).
-- **`Intro.js`** – An introduction section component (e.g., a brief description of the canteen).
-- **`Mantixon.js`** – A custom component (specific functionality, e.g., a special feature or widget).
-- **`ScrollToTop.js`** – A component that enables scrolling to the top of the page.
-- **`TotalPriceButton.js`** – A component for displaying the total price or a checkout button.
----
-
-### 📂 `components/About/`  
-This folder contains components related to the **About** section of the website:
-- **`AboutChefs.js`** – Displays information about the chefs or team members.
-- **`AboutPage.js`** – The main About page component that combines all About-related components.
+This folder contains reusable React components for the University Canteen Website. It is divided into subfolders for better organization:
+- **`About/`** – Components related to the About section.
+- **`Navbar/`** – Components related to navigation and layout.
 
 ---
 
-### 📂 `components/Navbar/`  
-This folder contains components related to the **navigation** and **layout** of the website:
-- **`NavBar.js`** – The main navigation bar component.
-- **`NavLinks.js`** – Handles the navigation links (e.g., Home, Menu, About, Contact).
+### 📂 `pages/`  
+This folder contains the main page components for the website, such as:
+- **`About.js`** – About page component.
+- **`Blog.js`** – Blog page component.
+- **`Contact.js`** – Contact page component.
+- **`DemoProduct.js`** – Demo product page component.
+- **`DishCard.js`** – Reusable dish card component.
+- **`Home.js`** – Home page component.
+- **`Menu.js`** – Menu page component.
+- **`Payment.js`** – Payment page component.
+- **`Services.js`** – Services page component.
+
+---
+
+### 📂 `style/`  
+This folder contains custom CSS files for styling different components and pages:
+- **`about.css`** – Styles for the About page.
+- **`blog.css`** – Styles for the Blog page.
+- **`dish.css`** – Styles for dish-related components.
+- **`mantixon.css`** – Styles for the Mantixon component.
+- **`menu.css`** – Styles for the Menu page.
+- **`NavBar.css`** – Styles for the navigation bar.
+- **`payment.css`** – Styles for the Payment page.
+- **`service.css`** – Styles for the Services page.
+
+---
+
+### 📄 `App.js`  
+The main application component that acts as the root of the React application. It typically includes:
+- Routing logic (using `react-router-dom`).
+- Layout structure (e.g., header, footer, and main content).
+
+---
+
+### 📄 `index.css`  
+The global stylesheet for the application. It includes:
+- Base styles (e.g., reset, fonts, colors).
+- Utility classes (if not using TailwindCSS or Bootstrap).
+
+---
+
+### 📄 `index.js`  
+The entry point for the React application. It typically includes:
+- Rendering the `App` component into the DOM.
+- Wrapping the app with providers (e.g., Redux, Context API).
+
+---
+
+This structure ensures a clean and organized codebase, making it easier to maintain and scale the project.
+
 
 ---
 
