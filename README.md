@@ -29,7 +29,8 @@ cd Web_Project
 2️⃣ Check whether Node is installed or not
 bash
 Copy
-node -v  
+node -v
+``` 
 If Node.js is not installed, you can download it from here.
 
 3️⃣ Install Dependencies
