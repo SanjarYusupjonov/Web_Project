@@ -1,7 +1,6 @@
 import React from "react";
 import AboutPage from "../components/About/AboutPage";
 import AboutChefs from "../components/About/AboutChefs";
-import AboutDevs from "../components/About/AboutDevs";
 import NavBar from "../components/Navbar/NavBar";
 import Footer from "../components/Footer";
 
@@ -28,9 +27,6 @@ const About = () => {
 
           {/* Component showcasing the chefs */}
           <AboutChefs />
-
-          {/* Component showcasing the developers */}
-          <AboutDevs />
 
           {/* Footer component */}
           <Footer />

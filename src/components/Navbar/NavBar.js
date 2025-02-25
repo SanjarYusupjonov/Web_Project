@@ -26,9 +26,9 @@ const NavBar = () => {
 
   return (
     <nav className={`navbar ${!top && "navbar-scrolled"}`}>
-      <div className="navbar-content">
+      <div className="navbar-content d-flex justify-content-between">
         {/* Logo section */}
-        <div className="logo-container px-4 pr-3">
+        <div className="logo-container px-16 me-auto">
           <HashLink smooth to="/#hero">
             <img
               src={logo}

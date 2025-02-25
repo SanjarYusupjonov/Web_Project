@@ -5,22 +5,22 @@ const NavLinks = () => {
     return (
         <>
             {/* Navigation links using HashLink for smooth scrolling */}
-            <HashLink className="px-1 font-extrabold text-gray-500 hover:text-blue-900" smooth to="/">
+            <HashLink className="pl-2 font-extrabold text-gray-500 hover:text-blue-900" smooth to="/">
                 Home
             </HashLink>
-            <HashLink className="px-1 font-extrabold text-gray-500 hover:text-blue-900" smooth to="/about">
+            <HashLink className="px-2 font-extrabold text-gray-500 hover:text-blue-900" smooth to="/about">
                 About
             </HashLink>
-            <HashLink className="px-1 font-extrabold text-gray-500 hover:text-blue-900" smooth to="/service">
+            <HashLink className="px-2 font-extrabold text-gray-500 hover:text-blue-900" smooth to="/service">
                 Services
             </HashLink>
-            <HashLink className="px-1 font-extrabold text-gray-500 hover:text-blue-900" to="/menu">
+            <HashLink className="px-2 font-extrabold text-gray-500 hover:text-blue-900" to="/menu">
                 Menu
             </HashLink>
-            <HashLink className="px-1 font-extrabold text-gray-500 hover:text-blue-900" to="/blog">
+            <HashLink className="px-2 font-extrabold text-gray-500 hover:text-blue-900" to="/blog">
                 Blog
             </HashLink>
-            <HashLink className="px-1 font-extrabold text-gray-500 hover:text-blue-900" to="/contact#contact">
+            <HashLink className="px-2 font-extrabold text-gray-500 hover:text-blue-900" to="/contact#contact">
                 Contact
             </HashLink>
         </>

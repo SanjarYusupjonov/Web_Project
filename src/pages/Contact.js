@@ -8,7 +8,7 @@ import Notiflix from 'notiflix';
 
 const Contact = () => {
     // Set the document title using a custom hook
-    useDocTitle('MLD | Molad e Konsult - Send us a message');
+    useDocTitle('New Uzbekistan University Canteen');
 
     // State management for form inputs and errors
     const [firstName, setFirstName] = useState('');
