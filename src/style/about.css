@@ -1,0 +1,226 @@
+.social a {
+  color: #444; /* Default color */
+  margin: 0 10px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for social icons */
+.social a:hover {
+  color: #007bff; /* Bootstrap primary color, or choose your own */
+  transform: scale(1.2);
+}
+.member-img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0; /* Rounded top corners */
+}
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  text-decoration: none;
+}
+
+.wave-container {
+  position: absolute;
+  bottom: -1px; /* Adjust this for smooth blending */
+  left: 0;
+  width: 100%;
+  height: 80px; /* Adjust height to match your image */
+  overflow: hidden;
+  
+}
+
+.wave {
+  width: 100%;
+  height: 100%;
+  transform: rotate(180deg);
+}
+.hover-scale:hover{
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+.wave-fill {
+  fill: white; /* Must match the background of the card */
+}
+
+.team-member:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.img-fluid{
+  width: 500px;
+  height: 350px;
+}
+.chefs .team-member {
+  background-color: var(--surface-color);
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.chefs .team-member .member-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.chefs .team-member .member-img:after {
+  position: absolute;
+  content: "";
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  height: 100%;
+  background-color: var(--surface-color);
+  /* -webkit-mask: url("../img/team-shape.svg") no-repeat center bottom; */
+  /* mask: url("../img/team-shape.svg") no-repeat center bottom; */
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  z-index: 1;
+}
+
+.chefs .team-member .social {
+  position: absolute;
+  right: -100%;
+  top: 30px;
+  opacity: 0;
+  border-radius: 4px;
+  transition: 0.5s;
+  background: color-mix(in srgb, var(--background-color), transparent 60%);
+  z-index: 2;
+}
+
+.chefs .team-member .social a {
+  transition: color 0.3s;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  margin: 15px 12px;
+  display: block;
+  line-height: 0;
+  text-align: center;
+}
+
+.chefs .team-member .social a:hover {
+  color: var(--default-color);
+}
+
+.chefs .team-member .social i {
+  font-size: 18px;
+}
+
+.chefs .team-member .member-info {
+  padding: 10px 15px 20px 15px;
+}
+
+.chefs .team-member .member-info h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-family: var(--default-font);
+}
+
+.chefs .team-member .member-info span {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+}
+
+.chefs .team-member .member-info p {
+  font-style: italic;
+  font-size: 14px;
+  padding-top: 15px;
+  line-height: 26px;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+.chefs .team-member:hover {
+  transform: scale(1.08);
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.chefs .team-member:hover .social {
+  right: 8px;
+  opacity: 1;
+}
+
+
+.redcolor{
+  color:red;
+}
+
+.font-amatic {
+  font-family: 'Amatic SC', cursive;
+  font-size: 50px;
+}
+.cheff{
+  font-size:13px;
+  font-family: sans-serif;
+}
+
+
+
+/* about section */
+/* about section */
+.about h3 {
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.about .book-a-table {
+  text-align: center;
+  border: 4px solid color-mix(in srgb, var(--default-color), transparent 30%);
+  padding: 22px;
+}
+
+.about .book-a-table h3 {
+  font-family: var(--default-font);
+  margin: 0 0 0 0;
+  font-size: 24px;
+}
+
+.about .book-a-table p {
+  color: var(--accent-color);
+  font-weight: 500;
+  font-size: 28px;
+  margin: 0;
+}
+
+.about .fst-italic {
+  color: color-mix(in srgb, var(--default-color), var(--contrast-color) 50%);
+}
+
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  padding: 0 0 10px 30px;
+  position: relative;
+}
+
+.about .content ul i {
+  position: absolute;
+  font-size: 20px;
+  left: 0;
+  top: -3px;
+  color: var(--accent-color);
+}
+
+.about .content p:last-child {
+  margin-bottom: 0;
+}
+
+.about .pulsating-play-btn {
+  position: absolute;
+  left: calc(50% - 47px);
+  top: calc(50% - 47px);
+}

@@ -10,7 +10,13 @@ import {
 // All pages
 import Home from './pages/Home';
 import Contact from './pages/Contact';
-import DemoProduct from './pages/DemoProduct';
+import Blog from './pages/Blog';
+import Mantixon from './components/Mantixon';
+import Service from './pages/Services';
+import Menu from './pages/Menu';
+import About from './pages/About';
+import Order from './pages/DishCard';
+import Payment from './pages/Payment';
 
 import {useDocTitle} from './components/CustomHook';
 import ScrollToTop from './components/ScrollToTop';
@@ -30,7 +36,7 @@ function App() {
     });
   }, []);
 
-  useDocTitle("MLD | Molad e Konsult - Bespoke Web and Mobile Applications");
+  useDocTitle("New Uzbekistan UNiversity Canteen");
 
   return (
     <>
@@ -39,7 +45,13 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/get-demo" element={<DemoProduct />} /> 
+            <Route path="/blog" element={<Blog />} /> 
+            <Route path='/mantixon' element={<Mantixon/>} /> 
+            <Route path='/service' element={<Service/>} /> 
+            <Route path='/menu' element={<Menu/>} />
+            <Route path='/about' element={<About/>} />  
+            <Route path='/order' element={<Order/>} />  
+            <Route path='/payment' element={<Payment/>} />  
           </Routes>
         </ScrollToTop>
       </Router>
